@@ -1,12 +1,58 @@
-# React + Vite
+# Anubhav-Portfolio-Website
+# Anubhav Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React and Vite, featuring beautiful animations and interactive components.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** - Frontend library
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
 
-## Expanding the ESLint configuration
+## 🛠️ Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Anubhavick/Anubhav-Portfolio-Website.git
+   cd Anubhav-Portfolio-Website
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+├── pages/             # Page components
+├── lib/               # Utility functions
+├── assets/            # Static assets
+└── App.jsx            # Main application component
+```
+
+## 🎨 Features
+
+- Responsive design for all devices
+- Smooth animations and transitions
+- Interactive UI components
+- Modern design patterns
+- Optimized performance
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
