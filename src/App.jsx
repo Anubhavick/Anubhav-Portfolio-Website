@@ -8,7 +8,6 @@ import SkillsSection from "./components/SkillsSection"
 import ProjectsSection from "./components/ProjectsSection"
 import TimelineSection from "./components/TimelineSection"
 import ContactSection from "./components/ContactSection"
-import { Analytics } from "@vercel/analytics/next"
 
 import './App.css'
 
@@ -37,7 +36,6 @@ function App() {
                 <ProjectsSection />
                 <TimelineSection />
                 <ContactSection />
-                <Analytics/>
               </>
             }
           />
