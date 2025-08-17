@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 
 
 export const PinContainer = ({
@@ -52,7 +52,7 @@ export const PinPerspective = ({
   return (
     <motion.div
       className="pointer-events-none  w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
-      <div className=" w-full h-full -mt-7 flex-none  inset-0">
+      <div className=" w-full h-full -mt-1 flex-none  inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center">
           <a
             href={href}
@@ -73,7 +73,7 @@ export const PinPerspective = ({
             perspective: "1000px",
             transform: "rotateX(70deg) translateZ(0)",
           }}
-          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2">
+          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-8 -translate-x-1/2 -translate-y-1/2">
           <>
             <motion.div
               initial={{

@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import { motion } from "motion/react";
 import { useRef, useEffect, useState } from "react";
 
@@ -7,7 +7,8 @@ export function PointerHighlight({
   children,
   rectangleClassName,
   pointerClassName,
-  containerClassName
+  containerClassName,
+  delay = 0
 }) {
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -43,8 +44,18 @@ export function PointerHighlight({
         <motion.div
           className="pointer-events-none absolute inset-0 z-0"
           initial={{ opacity: 0, scale: 0.95, originX: 0, originY: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}>
+          animate={{ 
+            opacity: [0, 1, 1, 0], 
+            scale: [0.95, 1, 1, 0.95] 
+          }}
+          transition={{ 
+            duration: 2.5, 
+            ease: "easeOut", 
+            delay: delay,
+            times: [0, 0.2, 0.8, 1],
+            repeat: Infinity,
+            repeatDelay: 8 // Wait 8 seconds before repeating the cycle
+          }}>
           <motion.div
             className={cn(
               "absolute inset-0 border border-neutral-800 dark:border-neutral-200",
@@ -54,29 +65,36 @@ export function PointerHighlight({
               width: 0,
               height: 0,
             }}
-            whileInView={{
-              width: dimensions.width,
-              height: dimensions.height,
+            animate={{
+              width: [0, dimensions.width, dimensions.width, 0],
+              height: [0, dimensions.height, dimensions.height, 0],
             }}
             transition={{
-              duration: 1,
+              duration: 2.5,
               ease: "easeInOut",
+              delay: delay,
+              times: [0, 0.4, 0.8, 1],
+              repeat: Infinity,
+              repeatDelay: 8
             }} />
           <motion.div
             className="pointer-events-none absolute"
             initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              x: dimensions.width + 4,
-              y: dimensions.height + 4,
+            animate={{
+              opacity: [0, 1, 1, 0],
+              x: [0, dimensions.width + 4, dimensions.width + 4, 0],
+              y: [0, dimensions.height + 4, dimensions.height + 4, 0],
             }}
             style={{
               rotate: -90,
             }}
             transition={{
-              opacity: { duration: 0.1, ease: "easeInOut" },
-              duration: 1,
+              duration: 2.5,
               ease: "easeInOut",
+              delay: delay,
+              times: [0, 0.4, 0.8, 1],
+              repeat: Infinity,
+              repeatDelay: 8
             }}>
             <Pointer className={cn("h-5 w-5 text-blue-500", pointerClassName)} />
           </motion.div>
