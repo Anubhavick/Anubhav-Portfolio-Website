@@ -30,7 +30,7 @@ const ContactSection = () => {
           <div className="bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
             <h3 className="text-2xl font-bold mb-4 text-deep-cove dark:text-white">Contact Me</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              I'm currently open for new opportunities and collaborations.
+              I'm always open for new opportunities and collaborations.
               Feel free to reach out through this form or connect with me on social media.
             </p>
             
