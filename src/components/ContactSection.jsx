@@ -1,3 +1,5 @@
+import { Boxes } from "./background-boxes";
+
 const ContactSection = () => {
   // Handle form submission - replace with actual form handling logic
   const handleSubmit = (e) => {
@@ -7,14 +9,20 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-neutral-800 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-deep-cove dark:text-bright-turquoise">
+    <section id="contact" className="py-20 bg-white dark:bg-neutral-900 px-4 relative overflow-hidden">
+      {/* Background Boxes */}
+      <div className="absolute inset-0 w-full h-full">
+        <Boxes />
+      </div>
+      
+      {/* Content overlay */}
+      <div className="container mx-auto max-w-4xl relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-deep-cove dark:text-white">
           Get In Touch
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
+          <div className="bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
             <h3 className="text-2xl font-bold mb-4 text-deep-cove dark:text-white">Contact Me</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               I'm currently open for new opportunities and collaborations.
@@ -68,7 +76,7 @@ const ContactSection = () => {
           </div>
           
           <div>
-            <form onSubmit={handleSubmit} className="bg-gray-50 dark:bg-neutral-900 rounded-xl p-6 shadow-md">
+            <form onSubmit={handleSubmit} className="bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
               <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Name
