@@ -1,4 +1,5 @@
 import { ThreeDMarquee } from './3d-marque';
+import { FollowerPointerCard } from './following-pointer';
 
 const HeroSection = () => {
   // Create expanded tech skills array for better coverage
@@ -12,10 +13,13 @@ const HeroSection = () => {
   ];
 
   return (
-    <section
-      id="hero"
+    <FollowerPointerCard
+      title="Hello"
       className="relative flex flex-col items-center justify-center min-h-screen pb-10 text-center px-4 overflow-hidden bg-white dark:bg-neutral-900 z-20"
     >
+      <section
+        id="hero"
+      >
       {/* 3D Marquee Background */}
       <div className="absolute inset-0 w-full h-full opacity-20 dark:opacity-30">
         <ThreeDMarquee 
@@ -48,7 +52,8 @@ const HeroSection = () => {
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
       </div>
-    </section>
+      </section>
+    </FollowerPointerCard>
   );
 };
 
