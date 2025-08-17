@@ -1,58 +1,86 @@
 "use client";
 
 import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 export const ThreeDMarquee = ({
   images,
   className
 }) => {
-  // Split the images array into 4 equal parts
-  const chunkSize = Math.ceil(images.length / 4);
-  const chunks = Array.from({ length: 4 }, (_, colIndex) => {
+  // If images are actually text strings, render them as text
+  const isText = images.every(item => typeof item === 'string' && !item.includes('.'));
+  
+  // Duplicate the array multiple times to fill more space
+  const duplicatedImages = [...images, ...images, ...images, ...images];
+  
+  // Split the duplicated images array into 6 columns instead of 4 for better coverage
+  const chunkSize = Math.ceil(duplicatedImages.length / 6);
+  const chunks = Array.from({ length: 6 }, (_, colIndex) => {
     const start = colIndex * chunkSize;
-    return images.slice(start, start + chunkSize);
+    return duplicatedImages.slice(start, start + chunkSize);
   });
+  
   return (
     <div
       className={cn(
-        "mx-auto block h-[600px] overflow-hidden rounded-2xl max-sm:h-100",
+        "mx-auto block h-full overflow-hidden max-sm:h-100 w-full",
         className
       )}>
       <div className="flex size-full items-center justify-center">
-        <div className="size-[1720px] shrink-0 scale-50 sm:scale-75 lg:scale-100">
+        <div className="size-[2400px] shrink-0 scale-75 sm:scale-90 lg:scale-110">
           <div
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
             }}
-            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d">
+            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-6 gap-2 transform-3d">
             {chunks.map((subarray, colIndex) => (
               <motion.div
-                animate={{ y: colIndex % 2 === 0 ? 100 : -100 }}
+                animate={{ y: colIndex % 2 === 0 ? 150 : -150 }}
                 transition={{
-                  duration: colIndex % 2 === 0 ? 10 : 15,
+                  duration: colIndex % 2 === 0 ? 8 : 12,
                   repeat: Infinity,
                   repeatType: "reverse",
+                  ease: "linear",
                 }}
                 key={colIndex + "marquee"}
-                className="flex flex-col items-start gap-8">
-                <GridLineVertical className="-left-4" offset="80px" />
-                {subarray.map((image, imageIndex) => (
-                  <div className="relative" key={imageIndex + image}>
-                    <GridLineHorizontal className="-top-4" offset="20px" />
-                    <motion.img
-                      whileHover={{
-                        y: -10,
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      key={imageIndex + image}
-                      src={image}
-                      alt={`Image ${imageIndex + 1}`}
-                      className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
-                      width={970}
-                      height={700} />
+                className="flex flex-col items-start gap-1">
+                <GridLineVertical className="-left-2" offset="100px" />
+                {subarray.map((item, itemIndex) => (
+                  <div className="relative" key={itemIndex + item + colIndex}>
+                    <GridLineHorizontal className="-top-2" offset="15px" />
+                    {isText ? (
+                      <motion.div
+                        whileHover={{
+                          y: -8,
+                          scale: 1.03,
+                        }}
+                        transition={{
+                          duration: 0.2,
+                          ease: "easeInOut",
+                        }}
+                        key={itemIndex + item + colIndex}
+                        className="rounded-lg ring ring-gray-950/10 hover:shadow-xl bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center p-3 backdrop-blur-sm border border-white/30 dark:border-gray-700/30"
+                        style={{ width: '320px', height: '200px' }}
+                      >
+                        <span className="text-base md:text-lg font-semibold text-gray-700 dark:text-gray-300 text-center">
+                          {item}
+                        </span>
+                      </motion.div>
+                    ) : (
+                      <motion.img
+                        whileHover={{
+                          y: -8,
+                        }}
+                        transition={{
+                          duration: 0.2,
+                          ease: "easeInOut",
+                        }}
+                        key={itemIndex + item + colIndex}
+                        src={item}
+                        alt={`Image ${itemIndex + 1}`}
+                        className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
+                        width={280}
+                        height={180} />
+                    )}
                   </div>
                 ))}
               </motion.div>

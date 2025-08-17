@@ -1,28 +1,28 @@
-import Dither from './Dither';
+import { ThreeDMarquee } from './3d-marque';
 
 const HeroSection = () => {
+  // Create expanded tech skills array for better coverage
+  const techSkills = [
+    "React", "Node.js", "TypeScript", "MongoDB", "Express.js", "Next.js", 
+    "Tailwind CSS", "JavaScript", "REST APIs", "GraphQL", "PostgreSQL", 
+    "Docker", "AWS", "Git", "Redux", "Prisma", "HTML5", "CSS3", 
+    "Python", "MySQL", "Firebase", "Vercel", "Netlify", "GitHub", 
+    "VS Code", "Postman", "Figma", "Linux", "Nginx", "Socket.io",
+    "Stripe", "JWT", "OAuth", "Webpack", "Babel", "ESLint"
+  ];
+
   return (
     <section
       id="hero"
       className="relative flex flex-col items-center justify-center min-h-screen pb-10 text-center px-4 overflow-hidden bg-white dark:bg-neutral-900 z-20"
     >
-      {/* Subtle Dithered Wave Background */}
-      <div className="absolute inset-0 w-full h-full opacity-30">
-        <Dither
-          waveColor={[0.1, 0.4, 0.6]} // More subtle, muted colors
-          disableAnimation={false}
-          enableMouseInteraction={true}
-          mouseRadius={0.2}
-          colorNum={8} // More colors for smoother gradients
-          waveAmplitude={0.15} // Gentler waves
-          waveFrequency={1.5} // Larger, smoother patterns
-          waveSpeed={0.02} // Slower movement
-          pixelSize={0.8} // Much finer pixelation
+      {/* 3D Marquee Background */}
+      <div className="absolute inset-0 w-full h-full opacity-20 dark:opacity-30">
+        <ThreeDMarquee 
+          images={techSkills} 
+          className="h-full"
         />
       </div>
-
-      {/* Dark gradient overlay to hide MacBook content */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/90 to-white/95 dark:from-neutral-900/80 dark:via-neutral-900/90 dark:to-neutral-900/95"></div>
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto">
