@@ -125,7 +125,7 @@ export const Lid = ({
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101]">
           <span className="text-white">
-            <AceternityLogo />
+            
           </span>
         </div>
       </div>
@@ -172,7 +172,7 @@ export const Lid = ({
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xs md:text-sm text-gray-400 leading-relaxed max-w-xs mx-auto"
             >
-              Building digital experiences with modern technologies
+              Full-Stack Developer specializing in creating fast, responsive web apps with React, Node.js, and TypeScript.
             </motion.div>
           </div>
           
@@ -622,23 +622,5 @@ export const OptionKey = ({
   );
 };
 
-const AceternityLogo = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-white">
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round" />
-    </svg>
-  );
-};
 
 export default MacbookScroll;
