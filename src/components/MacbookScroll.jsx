@@ -23,6 +23,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
+import BackgroundLines from "./background-lines";
 
 
 export const MacbookScroll = ({
@@ -112,6 +113,7 @@ export const Lid = ({
 }) => {
   return (
     <div className="relative [perspective:800px]">
+      {/* This is the static keyboard part, left unchanged */}
       <div
         style={{
           transform: "perspective(800px) rotateX(-25deg) translateZ(0px)",
@@ -124,11 +126,11 @@ export const Lid = ({
             boxShadow: "0px 2px 0px 2px #171717 inset",
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101]">
-          <span className="text-white">
-            
-          </span>
+          <span className="text-white"></span>
         </div>
       </div>
+
+      {/* This is the animated screen part */}
       <motion.div
         style={{
           scaleX: scaleX,
@@ -138,59 +140,54 @@ export const Lid = ({
           transformStyle: "preserve-3d",
           transformOrigin: "top",
         }}
-        className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2">
-        <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
-        
-        {/* Hero content inside MacBook screen */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 rounded-lg overflow-hidden">
-          {/* Subtle background pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="w-full h-full bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
-          </div>
+        className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2"
+      >
+        {/* The rounded corner container for the screen content */}
+        <div className="absolute inset-0 rounded-lg bg-black overflow-hidden">
           
-          {/* Content */}
-          <div className="relative z-10 space-y-3">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl md:text-3xl font-bold text-white leading-tight"
-            >
-              Anubhav Mishra
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-base md:text-lg text-gray-300 font-medium"
-            >
-              Full-Stack Developer
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-xs md:text-sm text-gray-400 leading-relaxed max-w-xs mx-auto"
-            >
-              Full-Stack Developer specializing in creating fast, responsive web apps with React, Node.js, and TypeScript.
-            </motion.div>
-          </div>
-          
-          {/* Animated scroll indicator */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="absolute bottom-6 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-3 h-3 border border-gray-400 rounded-full flex items-center justify-center"
-            >
-              <div className="w-0.5 h-0.5 bg-gray-400 rounded-full"></div>
-            </motion.div>
-          </motion.div>
+          {/* 2. Use BackgroundLines as the new background and content wrapper */}
+          <BackgroundLines className="h-full w-full relative flex items-center justify-center">
+
+            {/* 3. Your hero content now lives inside BackgroundLines */}
+            <div className="relative z-10 flex flex-col items-center justify-center space-y-3 text-center px-4 h-full w-full transform -translate-y-40">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent leading-tight"
+              >
+                Anubhav Mishra
+              </motion.h1>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-sm md:text-base text-gray-300"
+              >
+                Full-Stack Developer
+              </motion.p>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-xs md:text-sm text-gray-400 max-w-xs leading-relaxed"
+              >
+                I build fast, responsive, and beautiful web applications from concept to deployment.
+              </motion.p>
+              
+              <motion.a
+                href="#projects"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="mt-2 inline-block rounded-lg bg-white/10 px-4 py-2 text-xs font-medium text-white backdrop-blur-sm border border-white/20 transition-colors hover:bg-white/20"
+              >
+                View My Work
+              </motion.a>
+            </div>
+          </BackgroundLines>
         </div>
       </motion.div>
     </div>

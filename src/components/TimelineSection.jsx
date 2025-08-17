@@ -87,13 +87,13 @@ const TimelineSection = () => {
       content: (
         <div>
           <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            Senior Frontend Developer
+            Backend Developer
           </h4>
           <p className="text-lg text-blue-600 dark:text-blue-400 mb-4 font-medium">
-            Tech Innovations Inc.
+            Central Herlath innovation MRIIRS
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Leading front-end development for enterprise applications, mentoring junior developers, and implementing best practices for code quality and performance.
+            Leading backend development for enterprise applications, mentoring junior developers, and implementing best practices for code quality and performance.
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">
@@ -141,23 +141,26 @@ const TimelineSection = () => {
       content: (
         <div>
           <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            Advanced React Certification
+            Advanced Backend Development
           </h4>
           <p className="text-lg text-purple-600 dark:text-purple-400 mb-4 font-medium">
-            React Academy
+            Self-Directed Learning & Certification
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Completed advanced certification in React development, including state management with Redux, React Query, and performance optimization techniques.
+            Mastered advanced backend concepts including microservices, authentication systems, and API integration. Gained expertise in Google Maps API, payment gateways, and cloud deployment strategies.
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
-              Redux
+              Microservices
             </span>
             <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
-              React Query
+              Authentication
             </span>
             <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
-              Performance
+              Google Maps API
+            </span>
+            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
+              Cloud Deployment
             </span>
           </div>
         </div>
@@ -168,23 +171,23 @@ const TimelineSection = () => {
       content: (
         <div>
           <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            Junior Developer
+            MERN Stack Learning Journey
           </h4>
           <p className="text-lg text-orange-600 dark:text-orange-400 mb-4 font-medium">
-            StartUp Tech
+            Intensive Skill Development
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Built and deployed web applications using modern JavaScript frameworks. Participated in agile development processes and collaborated in cross-functional teams.
+            Transitioned from frontend focus to full-stack development. Built multiple projects using MongoDB, Express.js, React, and Node.js. Developed expertise in backend architecture and RESTful API design.
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">
               JavaScript
             </span>
             <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">
-              Agile
+              REST APIs
             </span>
             <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">
-              Team Work
+              Project-Based Learning
             </span>
           </div>
         </div>
@@ -195,13 +198,13 @@ const TimelineSection = () => {
       content: (
         <div>
           <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            Computer Science Degree
+            Computer Science Foundation
           </h4>
           <p className="text-lg text-red-600 dark:text-red-400 mb-4 font-medium">
-            Tech University
+            Academic Excellence & Programming Fundamentals
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Graduated with honors in Computer Science with a focus on web development and algorithms. Completed capstone project on interactive data visualization.
+            Graduated with strong foundation in computer science principles, algorithms, and data structures. Completed capstone project focusing on web application development and database management.
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
@@ -211,7 +214,10 @@ const TimelineSection = () => {
               Data Structures
             </span>
             <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
-              Web Development
+              Programming Fundamentals
+            </span>
+            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
+              Database Management
             </span>
           </div>
         </div>
