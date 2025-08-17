@@ -3,10 +3,11 @@ import {
   IconHome, 
   IconUser, 
   IconCode, 
-  IconBriefcase, 
-  IconTimeline, 
-  IconMail,
-  IconBrandGithub
+  IconBriefcase,
+  IconBrandGithub,
+  IconReceiptDollar,
+  IconBrandX,
+  IconBrandLinkedin
 } from "@tabler/icons-react";
 
 const Navbar = () => {
@@ -40,18 +41,18 @@ const Navbar = () => {
       href: "#projects",
     },
     {
-      title: "Timeline",
+      title: "Linkedin",
       icon: (
-        <IconTimeline className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#timeline",
+      href: "https://linkedin.com/in/anubhavick",
     },
     {
-      title: "Contact",
+      title: "X",
       icon: (
-        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#contact",
+      href: "https://x.com/Anubhavick",
     },
     {
       title: "GitHub",
@@ -59,6 +60,13 @@ const Navbar = () => {
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://github.com/Anubhavick",
+    },
+    {
+      title: "Work With Me",
+      icon: (
+        <IconReceiptDollar className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#workWithMe",
     },
   ];
 
