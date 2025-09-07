@@ -11,64 +11,64 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A fully responsive e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product filtering, cart functionality, and payment integration.",
-      image: "https://via.placeholder.com/600x400?text=E-Commerce+Project",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      liveLink: "#",
-      codeLink: "#",
+      title: "type-safe-router-gen",
+      description: "A CLI tool to generate type-safe navigation helpers for file-based frontend routers",
+      image: "/npm.jpeg.webp",
+      tags: ["Node.js", "JavaScript", "TypeScript"],
+      liveLink: "https://www.npmjs.com/package/type-safe-router-gen",
+      codeLink: "https://github.com/Anubhavick/type-safe-router-gen",
       color: "#FF6B6B"
     },
     {
       id: 2,
-      title: "Portfolio Website",
-      description: "A modern and responsive portfolio website showcasing my projects and skills. Built with React and Tailwind CSS with smooth animations and dark mode support.",
-      image: "https://via.placeholder.com/600x400?text=Portfolio+Website",
-      tags: ["React", "Tailwind CSS", "Responsive Design"],
-      liveLink: "#",
-      codeLink: "#",
+      title: "type-mock-server",
+      description: "Instant type-safe mock APIs from your TypeScript types or schemas.",
+      image: "/npm.jpeg.webp",
+      tags: ["Node.js", "JavaScript", "TypeScript"],
+      liveLink: "https://www.npmjs.com/package/type-mock-server",
+      codeLink: "https://github.com/Anubhavick/type-mock-server",
       color: "#4ECDC4"
     },
     {
       id: 3,
-      title: "Task Management App",
-      description: "A productivity application for managing tasks and projects. Features include drag-and-drop interfaces, task categorization, deadline reminders, and team collaboration tools.",
-      image: "https://via.placeholder.com/600x400?text=Task+Management+App",
-      tags: ["React", "Firebase", "Material UI"],
-      liveLink: "#",
-      codeLink: "#",
+      title: "Healthy Me",
+      description: "Healthy Me is an intelligent nutrition companion that leverages cutting-edge AI technology to help users track their meals, analyze nutritional content, and improve their dietary habits with personalized insights.",
+      image: "/hme.png",
+      tags: ["React", "Firebase", "Material UI", "AI", "TypeScript"],
+      liveLink: "https://healthy-me-psi.vercel.app/",
+      codeLink: "https://github.com/Anubhavick/Healthy-Me",
       color: "#45B7D1"
     },
     {
       id: 4,
-      title: "Algorithm Visualizer",
-      description: "An interactive tool for visualizing various algorithms including sorting, searching, and graph traversals. Helps users understand complex algorithms through visual representation.",
-      image: "https://via.placeholder.com/600x400?text=Algorithm+Visualizer",
-      tags: ["JavaScript", "Canvas API", "Algorithms", "Data Structures"],
-      liveLink: "#",
+      title: "Web app for Skycore",
+      description: "To provide aspiring pilots with the most advanced, safety-oriented, and comprehensive flight training available.",
+      image: "/skycore.png",
+      tags: ["Typescript", "React", "HTML", "CSS", "Tailwind", "Node.js"],
+      liveLink: "https://skycore-kappa.vercel.app/",
       codeLink: "#",
       color: "#96CEB4"
     },
-    {
-      id: 5,
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with forecasts, interactive maps, and location-based weather data. Built with modern APIs and responsive design.",
-      image: "https://via.placeholder.com/600x400?text=Weather+Dashboard",
-      tags: ["JavaScript", "Weather API", "Chart.js"],
-      liveLink: "#",
-      codeLink: "#",
-      color: "#FFEAA7"
-    },
-    {
-      id: 6,
-      title: "Chat Application",
-      description: "Real-time chat application with multiple rooms, file sharing, and user authentication. Built with Socket.io and modern web technologies.",
-      image: "https://via.placeholder.com/600x400?text=Chat+App",
-      tags: ["Socket.io", "Node.js", "React"],
-      liveLink: "#",
-      codeLink: "#",
-      color: "#DDA0DD"
-    }
+    // {
+    //   id: 5,
+    //   title: "Weather Dashboard",
+    //   description: "A beautiful weather application with forecasts, interactive maps, and location-based weather data. Built with modern APIs and responsive design.",
+    //   image: "https://via.placeholder.com/600x400?text=Weather+Dashboard",
+    //   tags: ["JavaScript", "Weather API", "Chart.js"],
+    //   liveLink: "#",
+    //   codeLink: "#",
+    //   color: "#FFEAA7"
+    // },
+    // {
+    //   id: 6,
+    //   title: "Chat Application",
+    //   description: "Real-time chat application with multiple rooms, file sharing, and user authentication. Built with Socket.io and modern web technologies.",
+    //   image: "https://via.placeholder.com/600x400?text=Chat+App",
+    //   tags: ["Socket.io", "Node.js", "React"],
+    //   liveLink: "#",
+    //   codeLink: "#",
+    //   color: "#DDA0DD"
+    // }
   ];
 
   // Navigation functions
