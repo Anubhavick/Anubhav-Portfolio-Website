@@ -23,7 +23,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import BackgroundLines from "./background-lines";
+import BackgroundLines from "./ui/background-lines";
 
 
 export const MacbookScroll = ({

@@ -1,5 +1,5 @@
-import { HeroParallax } from './hero-parallax';
-import { FollowerPointerCard } from './following-pointer';
+import { HeroParallax } from './ui/hero-parallax';
+import { FollowerPointerCard } from './ui/following-pointer';
 
 // local products using images from /public
 export const heroProducts = [

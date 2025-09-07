@@ -1,6 +1,6 @@
 import { PinContainer } from './3d-pin';
 import { BackgroundBeamsWithCollision } from './background-beams-with-collision';
-import { PointerHighlight } from './pointer-highlight';
+import { PointerHighlight } from './ui/pointer-highlight';
 import { useState, useEffect } from 'react';
 
 const ProjectsSection = () => {

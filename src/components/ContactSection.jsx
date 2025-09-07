@@ -1,4 +1,4 @@
-import { Boxes } from "./background-boxes";
+import { Boxes } from "./ui/background-boxes";
 
 const ContactSection = () => {
   // Handle form submission - replace with actual form handling logic

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
-import { TextRevealCard, TextRevealCardTitle, TextRevealCardDescription } from './TextRevealCard';
-import { TextGenerateEffect } from './TextGenerateEffect';
+import { TextRevealCard, TextRevealCardTitle, TextRevealCardDescription } from './ui/TextRevealCard';
+import { TextGenerateEffect } from './ui/TextGenerateEffect';
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
