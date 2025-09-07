@@ -82,6 +82,39 @@ export const Timeline = ({
 const TimelineSection = () => {
   // Timeline data adapted for the new component structure
   const timelineData = [
+        {
+      title: "2025",
+      content: (
+        <div>
+          <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
+            Full Stack Development
+          </h4>
+          <p className="text-lg text-red-600 dark:text-red-400 mb-4 font-medium">
+            Skycore aviation academy 
+          </p>
+          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
+            working on Full Stack Development, covering both frontend and backend technologies.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
+              React
+            </span>
+            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
+              Node.js
+            </span>
+            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
+              Express
+            </span>
+            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
+              MongoDB
+            </span>
+            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
+              Database Management
+            </span>
+          </div>
+        </div>
+      ),
+    },
     {
       title: "2025",
       content: (
@@ -90,7 +123,7 @@ const TimelineSection = () => {
             Backend Developer
           </h4>
           <p className="text-lg text-blue-600 dark:text-blue-400 mb-4 font-medium">
-            Central Herlath innovation MRIIRS
+            Central Health innovation MRIIRS
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
             Leading backend development for enterprise applications, mentoring junior developers, and implementing best practices for code quality and performance.
@@ -109,120 +142,36 @@ const TimelineSection = () => {
         </div>
       ),
     },
-    {
-      title: "2023-2025",
+        {
+      title: "2024-2025",
       content: (
         <div>
           <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            Full Stack Developer
+            Learning Full Stack Development
           </h4>
-          <p className="text-lg text-green-600 dark:text-green-400 mb-4 font-medium">
-            Digital Solutions Ltd.
+          <p className="text-lg text-blue-600 dark:text-blue-400 mb-4 font-medium">
+            learning Full Stack Development, covering both frontend and backend technologies.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Developed and maintained full-stack web applications using React, Node.js, and MongoDB. Collaborated with UX/UI designers to implement responsive and accessible interfaces.
+            Building a strong foundation in web development, including HTML, CSS, JavaScript, and popular frameworks like React and Node.js.
           </p>
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">
+            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">
               React
             </span>
-            <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">
+            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">
+              TypeScript
+            </span>
+            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">
               Node.js
             </span>
-            <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">
-              MongoDB
+            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">
+              Express
             </span>
           </div>
         </div>
       ),
-    },
-    {
-      title: "2023",
-      content: (
-        <div>
-          <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            Advanced Backend Development
-          </h4>
-          <p className="text-lg text-purple-600 dark:text-purple-400 mb-4 font-medium">
-            Self-Directed Learning & Certification
-          </p>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Mastered advanced backend concepts including microservices, authentication systems, and API integration. Gained expertise in Google Maps API, payment gateways, and cloud deployment strategies.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
-              Microservices
-            </span>
-            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
-              Authentication
-            </span>
-            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
-              Google Maps API
-            </span>
-            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">
-              Cloud Deployment
-            </span>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2021-2023",
-      content: (
-        <div>
-          <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            MERN Stack Learning Journey
-          </h4>
-          <p className="text-lg text-orange-600 dark:text-orange-400 mb-4 font-medium">
-            Intensive Skill Development
-          </p>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Transitioned from frontend focus to full-stack development. Built multiple projects using MongoDB, Express.js, React, and Node.js. Developed expertise in backend architecture and RESTful API design.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">
-              JavaScript
-            </span>
-            <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">
-              REST APIs
-            </span>
-            <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">
-              Project-Based Learning
-            </span>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2021",
-      content: (
-        <div>
-          <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-            Computer Science Foundation
-          </h4>
-          <p className="text-lg text-red-600 dark:text-red-400 mb-4 font-medium">
-            Academic Excellence & Programming Fundamentals
-          </p>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-            Graduated with strong foundation in computer science principles, algorithms, and data structures. Completed capstone project focusing on web application development and database management.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
-              Algorithms
-            </span>
-            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
-              Data Structures
-            </span>
-            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
-              Programming Fundamentals
-            </span>
-            <span className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">
-              Database Management
-            </span>
-          </div>
-        </div>
-      ),
-    },
+    }
   ];
 
   return (

@@ -22,7 +22,7 @@ const HeroSection = () => {
   
 
   return (
-    <FollowerPointerCard
+    <FollowerPointerCard    
       title="Hello"
       className="relative flex flex-col items-center justify-center min-h-screen pb-10 text-center px-4 overflow-hidden bg-white dark:bg-neutral-900 z-20"
     >
